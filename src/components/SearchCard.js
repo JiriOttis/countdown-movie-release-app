@@ -6,7 +6,7 @@ const SearchCard = () => {
         <p className="search-subheading">Type in a movie you want to find out how much time is left until its release</p>
         <form>
             <input type="text" placeholder="Dune: Part Two"/>
-            <button type='submit' className="search-button">SEARCH</button>
+            <button type='submit' className="button-search">SEARCH</button>
         </form>
     </div>
 };

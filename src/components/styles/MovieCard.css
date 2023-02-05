@@ -1,0 +1,93 @@
+.countdown-card {
+    margin-top: 30px;
+    min-height: 350px;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #003d70;
+    width: 100%;
+}
+
+.countdown-card-heading {
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.countdown-card-subheading {
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.countdown-container {
+    margin-top: 150px;
+}
+
+.movie-card {
+    display: grid;
+    column-gap: 6rem;
+    grid-template-areas:
+    "img info"
+    "img buttons"
+}
+
+.img-container {
+    grid-area: img;
+}
+
+.info-container {
+    grid-area: info;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+}
+
+.info-container > * {
+    margin-bottom: 50px;
+    padding-right: 15px;
+}
+
+.info-container > *:first-child {
+    margin-top: 50px;
+}
+
+.buttons-container {
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.buttons-container button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    cursor: pointer ;
+    margin: 0 10px
+}
+
+.button-trailer {
+    background-color: #E23636;
+}
+
+.button-info {
+    background-color: #518CCA;
+}
+
+.button-trailer:hover {
+    background-color: #b22727;
+}
+
+.button-info:hover {
+    background-color: #3f77ab;
+}
+
+
