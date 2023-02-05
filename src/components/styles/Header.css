@@ -1,0 +1,37 @@
+header {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.textLogo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul a:hover{
+    color: #7575b7;
+    font-size: 21px
+}
+
+nav ul li{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding-right: 30px;
+    list-style: none;
+}
+
+/*TODO: add media queries*/
+

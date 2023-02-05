@@ -1,0 +1,12 @@
+footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+footer p {
+    font-family: 'Merriweather', serif;
+    font-size: 12px;
+}
