@@ -66,7 +66,6 @@
     background-color: #36638c;
 }
 
-
 .search-card form input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgba(128, 128, 128, 0.4);
     opacity: 1; /* Firefox */
@@ -78,4 +77,44 @@
 
 .search-card form input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
     color: rgba(128, 128, 128, 0.4);
+}
+
+@media (max-width: 992px) {
+    .search-heading {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 32px;
+    }
+
+    .search-subheading {
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+
+    .search-card form{
+        padding-top: 30px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .search-card form input[type=text] {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .search-heading {
+            font-size: 28px;
+        }
+
+        .search-subheading {
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 14px;
+        }
+    }
 }
