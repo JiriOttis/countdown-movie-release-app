@@ -11,6 +11,7 @@
 
 .countdown-card-heading {
     padding-top: 10px;
+    padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -88,6 +89,48 @@
 
 .button-info:hover {
     background-color: #3f77ab;
+}
+
+@media (max-width: 992px) {
+    .countdown-card-heading {
+        font-size: 26px;
+    }
+
+    .movie-card {
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        "img"
+        "info"
+        "buttons";
+    }
+
+    .img-container img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+
+    .buttons-container button {
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .buttons-container button {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
 }
 
 
