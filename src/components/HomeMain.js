@@ -1,10 +1,10 @@
 import "./styles/HomeMain.css"
 import SearchCard from "./SearchCard";
 
-const HomeMain = () => {
+const HomeMain = ({setMovie}) => {
     return <main className='main-home'>
         <h1>WHEN IS THE MOVIE RELEASED?</h1>
-        <SearchCard/>
+        <SearchCard setMovie={setMovie}/>
     </main>
 };
 

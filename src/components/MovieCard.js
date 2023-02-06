@@ -1,25 +1,33 @@
 import "./styles/MovieCard.css"
 import Countdown from "./Countdown";
 
-const MovieCard = () => {
+const MovieCard = ({movie}) => {
+    console.log(movie);
+    const BACKDROP_PATH = "https://image.tmdb.org/t/p/w780"
+    const title = movie.title;
+    const releaseDate = movie.release_date;
+    const genres = movie.genre_ids;
+    const description = movie.overview;
+    const posterPath = movie.poster_path;
+
     return <main className='main-movie-card'>
         <div className='countdown-card'>
-            <h2 className='countdown-card-heading'>Ant-Man a Wasp: Quantumania</h2>
+            <h2 className='countdown-card-heading'>{title}</h2>
             <h4 className='countdown-card-subheading'>releases in</h4>
 
             <Countdown/>
         </div>
         <div className="movie-card">
             <div className="img-container">
-                <img src={require('../assets/quantumania-poster.jpeg')} alt="poster" width="455"/>
+                <img src={`${BACKDROP_PATH}${posterPath}`} alt="poster" width="390"/>
             </div>
             <div className='info-container'>
-                <p><strong>Release Date:</strong> February 17, 2023</p>
-                <p><strong>Release Date:</strong> February 17, 2023</p>
+                <p><strong>Release Date: </strong>{releaseDate}</p> {/*TODO: add different date style*/}
+                <p><strong>Genres:</strong> {genres.map((genre) => `${genre}, `)}</p>
                 <p><strong>Release Date:</strong> February 17, 2023</p>
 
                 <p className='description'><strong>Description:</strong><br/>
-                    Scott Lang and Hope Van Dyne, along with Hank Pym and Janet Van Dyne, explore the Quantum Realm, where they interact with strange creatures and embark on an adventure that goes beyond the limits of what they thought was possible.
+                    {description}
                 </p>
             </div>
 
