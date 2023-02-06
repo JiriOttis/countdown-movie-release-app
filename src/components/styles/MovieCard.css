@@ -1,7 +1,6 @@
 .countdown-card {
     margin-top: 30px;
     min-height: 350px;
-    max-height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,10 +21,6 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 20px;
-}
-
-.countdown-container {
-    margin-top: 150px;
 }
 
 .movie-card {
@@ -53,6 +48,10 @@
 
 .info-container > *:first-child {
     margin-top: 50px;
+}
+
+.description {
+    text-align: justify;
 }
 
 .buttons-container {
@@ -91,7 +90,37 @@
     background-color: #3f77ab;
 }
 
+/*Countdown styling */
+
+.countdown-card > .countdown-container {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.countdown-card > .countdown-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.countdown-card > .countdown-container .countdown-number {
+    font-size: 4vw;
+}
+
+.countdown-card > .countdown-container .countdown-label {
+    font-size: 3vw;
+}
+
+
+
 @media (max-width: 992px) {
+    .countdown-card {
+        min-height: 40vw;
+    }
     .countdown-card-heading {
         font-size: 26px;
     }
@@ -116,9 +145,37 @@
         font-size: 20px;
     }
 
+    .countdown-card > .countdown-container {
+        margin-top: 10vw;
+        gap: 2vw;
+    }
+
+    .countdown-card > .countdown-container .countdown-number {
+        font-size: 5vw;
+    }
+
+    .countdown-card > .countdown-container .countdown-label {
+        font-size: 4vw;
+    }
+
 }
 
 @media (max-width: 768px) {
+    .countdown-card-heading {
+        font-size: 6vw;
+    }
+
+    .countdown-card-subheading {
+        font-size: 5vw;
+    }
+
+    .countdown-card > .countdown-container {
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+
     .buttons-container {
         display: flex;
         flex-direction: column;
@@ -129,6 +186,20 @@
     .buttons-container button {
         padding: 15px 20px;
         font-size: 14px;
+    }
+
+    .countdown-card > .countdown-container {
+        margin-top: 5vw;
+        gap: 5vw;
+        padding-bottom: 10px;
+    }
+
+    .countdown-card > .countdown-container .countdown-number {
+        font-size: 8vw;
+    }
+
+    .countdown-card > .countdown-container .countdown-label {
+        font-size: 6vw;
     }
 
 }
