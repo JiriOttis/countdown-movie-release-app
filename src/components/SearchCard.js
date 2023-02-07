@@ -2,10 +2,7 @@ import './styles/SearchCard.css';
 import axios from 'axios';
 import {useEffect, useState} from "react";
 
-const SearchCard = ({setMovie}) => {
-
-    const API_URL = "https://api.themoviedb.org/3";
-    const API_KEY = "a69d86428fb8f507454d21335d28c1b7"
+const SearchCard = ({API_URL, API_KEY, setMovie}) => {
 
     const [searchKey, setSearchKey] = useState("");
 

@@ -4,8 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #003d70;
     width: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .countdown-card-heading {
@@ -22,6 +24,7 @@
     font-weight: 300;
     font-size: 20px;
 }
+
 
 .movie-card {
     display: grid;
@@ -115,6 +118,59 @@
     font-size: 3vw;
 }
 
+.release-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+/*Youtube trailer */
+.youtube-container {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.youtube {
+    background-color: #101014;
+    position: fixed;
+    left: 12.5%;
+    right: 0;
+    top: 12.5%;
+    bottom: 0;
+    width: 75%;
+    height: 75%;
+}
+
+.close-trailer-icon {
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.error-text {
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
 
 
 @media (max-width: 992px) {

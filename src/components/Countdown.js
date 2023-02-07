@@ -1,10 +1,12 @@
 import useCountdown from "../useCountdown";
 
-const Countdown = () => {
+const Countdown = ({releaseDate}) => {
 
-    const [countdownDays, countdownHours, countdownMinutes, countdownSeconds, setEndTime] = useCountdown(new Date("February 7, 2023"));
+    const today = new Date().getTime();
+    const releaseDateAsDate = new Date(releaseDate);
+    const [countdownDays, countdownHours, countdownMinutes, countdownSeconds, setEndTime] = useCountdown(releaseDateAsDate);
 
-    return <div className="countdown-container">
+    const countdown = <>
         <section>
             <p className="countdown-number">{countdownDays}</p>
             <p className="countdown-label">DAYS</p>
@@ -21,6 +23,16 @@ const Countdown = () => {
             <p className="countdown-number">{countdownSeconds}</p>
             <p className="countdown-label">SECONDS</p>
         </section>
+    </>
+
+
+    const releasedInfo = <div className='release-info'>
+        <p>Movie was released:</p>
+        <p>{releaseDate}</p>
+    </div>
+
+    return <div className="countdown-container">
+        {today < releaseDateAsDate ? countdown : releasedInfo}
     </div>
 };
 
