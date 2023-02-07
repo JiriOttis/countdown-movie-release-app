@@ -1,8 +1,10 @@
-const NavLinks = () => {
+import { NavLink } from 'react-router-dom';
+
+const NavLinks = ({deleteCurrentMovie, movie}) => {
     return <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">UPCOMING MOVIES</a></li>
+        <li><NavLink to="/" onClick={() => deleteCurrentMovie(movie)}>HOME</NavLink></li>
+        <li><NavLink to="/about">ABOUT</NavLink></li>
+        <li><NavLink to="/upcoming">UPCOMING MOVIES</NavLink></li>
     </ul>
 };
 

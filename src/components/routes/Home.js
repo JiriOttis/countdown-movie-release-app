@@ -11,9 +11,15 @@ const Home = () => {
 
     const [movie, setMovie] = useState({});
 
+    const deleteCurrentMovie = (movie) => {
+        if (Object.keys(movie).length > 0) {
+            setMovie({});
+        }
+    }
+
     return (
         <>
-            <Header/>
+            <Header deleteCurrentMovie={deleteCurrentMovie} movie={movie}/>
             {Object.keys(movie).length > 0 ? <MovieCard API_URL={API_URL} API_KEY={API_KEY} movie={movie} /> : <HomeMain API_URL={API_URL} API_KEY={API_KEY} setMovie={setMovie}/>}
             <Footer/>
         </>

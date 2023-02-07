@@ -1,8 +1,8 @@
 import NavLinks from "./NavLinks";
 
-const Navigation = () => {
+const Navigation = ({deleteCurrentMovie, movie}) => {
     return <nav className='navigation'>
-        <NavLinks className="mobile-navigation"/>
+        <NavLinks className="mobile-navigation" deleteCurrentMovie={deleteCurrentMovie} movie={movie}/>
     </nav>
 
 };

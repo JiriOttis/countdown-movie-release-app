@@ -4,7 +4,7 @@ import {MdClose} from 'react-icons/md';
 import {useState} from "react";
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-const MobileNavigation = () => {
+const MobileNavigation = ({deleteCurrentMovie, movie}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     isOpen ? disableBodyScroll(document) : enableBodyScroll(document);
@@ -15,7 +15,7 @@ const MobileNavigation = () => {
 
     return <nav className='mobile-navigation'>
         {isOpen ? closeIcon : menuIcon}
-        {isOpen && <NavLinks/>}
+        {isOpen && <NavLinks deleteCurrentMovie={deleteCurrentMovie} movie={movie}/>}
     </nav>
 
 };
