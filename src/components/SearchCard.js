@@ -3,7 +3,7 @@ import axios from 'axios';
 import {useEffect, useState} from "react";
 
 const SearchCard = ({API_URL, API_KEY, setMovie}) => {
-
+    /*TODO: error handling*/
     const [searchKey, setSearchKey] = useState("");
 
     useEffect(() => {

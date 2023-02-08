@@ -1,0 +1,74 @@
+.upcoming-card {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+
+.upcoming-movie-container {
+    display: grid;
+    grid-auto-rows: 1fr 3fr;
+    column-gap: 1vw;
+}
+
+.upcoming-movie-title {
+    margin-top: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    justify-self: center;
+    font-size: 2vw;
+}
+#upcoming-countdown-card {
+    min-height: 100px;
+}
+
+#upcoming-countdown-card > .countdown-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#upcoming-countdown-card > .countdown-container .countdown-number {
+    font-size: 3vw;
+}
+
+#upcoming-countdown-card > .countdown-container .countdown-label {
+    font-size: 2vw;
+}
+
+@media (max-width: 992px) {
+    .upcoming-movie-title {
+        font-size: 3.5vw;
+    }
+
+    #upcoming-countdown-card > .countdown-container .countdown-number {
+        font-size: 4vw;
+    }
+
+    #upcoming-countdown-card > .countdown-container .countdown-label {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #upcoming-countdown-card {
+        margin-top: 1vw;
+    }
+
+    .upcoming-movie-title {
+        font-size: 4.25vw;
+    }
+
+    #upcoming-countdown-card > .countdown-container {
+        margin-top: 2.5vw;
+        gap: 20px;
+        padding-bottom: 5vw;
+    }
+
+    .upcoming-movie-container {
+        grid-auto-rows: auto;
+    }
+
+}

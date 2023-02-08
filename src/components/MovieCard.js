@@ -4,7 +4,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import Youtube from 'react-youtube';
 import {MdClose} from 'react-icons/md';
-import moment from 'moment';
+import {changeDateFormat} from "../utils";
 
 
 const MovieCard = ({API_URL, API_KEY, movie}) => {
@@ -70,9 +70,7 @@ const MovieCard = ({API_URL, API_KEY, movie}) => {
         }
     }
 
-    const changeDateFormat = (date) => {
-        return moment(new Date(date)).format("D MMMM YYYY");
-    };
+
 
 
     return <main className='main-movie-card'>
