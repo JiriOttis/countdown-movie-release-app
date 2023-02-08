@@ -4,12 +4,12 @@ import "./styles/UpcomingCard.css"
 const UpcomingCard = ({upcomingMovies}) => {
 
     const renderMovies = () => (
-        upcomingMovies.map(movie => (
+       upcomingMovies.length > 0 ? upcomingMovies.map(movie => (
             <UpcomingMovie
                 key={movie.id}
                 movie={movie}
             />
-        ))
+        )) : <div className="error-found">Loading upcoming movies...</div>
     )
 
 

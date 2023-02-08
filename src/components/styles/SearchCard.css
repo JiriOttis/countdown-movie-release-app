@@ -34,6 +34,14 @@
     outline: none;
 }
 
+.error-found {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: red;
+    background: #EBEBF0;
+}
+
 .search-heading {
     padding-left: 15px;
     padding-right: 15px;
@@ -63,6 +71,8 @@
     text-align: center;
     cursor: pointer ;
 }
+
+
 
 .button-search:hover {
     background-color: #36638c;
