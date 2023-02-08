@@ -4,6 +4,8 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import Youtube from 'react-youtube';
 import {MdClose} from 'react-icons/md';
+import moment from 'moment';
+
 
 const MovieCard = ({API_URL, API_KEY, movie}) => {
     const BACKDROP_URL = "https://image.tmdb.org/t/p/original"
@@ -68,6 +70,9 @@ const MovieCard = ({API_URL, API_KEY, movie}) => {
         }
     }
 
+    const changeDateFormat = (date) => {
+        return moment(new Date(date)).format("D MMMM YYYY");
+    };
 
 
     return <main className='main-movie-card'>
@@ -79,14 +84,14 @@ const MovieCard = ({API_URL, API_KEY, movie}) => {
             <h2 className='countdown-card-heading'>{title}</h2>
             <h4 className='countdown-card-subheading'>releases in</h4>
 
-            <Countdown releaseDate={releaseDate}/>
+            <Countdown releaseDate={releaseDate} changeDateFormat={changeDateFormat}/>
         </div>
         <div className="movie-card">
             <div className="img-container">
                 <img src={`${BACKDROP_URL}${posterPath}`} alt="poster" width="390"/>
             </div>
             <div className='info-container'>
-                <p><strong>Release Date: </strong>{releaseDate}</p> {/*TODO: add different date style*/}
+                <p><strong>Release Date: </strong>{changeDateFormat(releaseDate)}</p> {/*TODO: add different date style*/}
                 <p><strong>Genres:</strong> {genresNames.map((genre) => `${genre}`).join(', ')}</p>
 
                 <p className='description'><strong>Description:</strong><br/>

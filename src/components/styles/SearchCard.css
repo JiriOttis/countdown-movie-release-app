@@ -1,6 +1,8 @@
 .search-card{
     width: 100%;
-    background-color: #2f8166;
+    background-image: url("/src/assets/search-card-photo.jpg");
+    background-position: bottom;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;

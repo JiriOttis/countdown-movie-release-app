@@ -1,6 +1,6 @@
 import useCountdown from "../useCountdown";
 
-const Countdown = ({releaseDate}) => {
+const Countdown = ({releaseDate, changeDateFormat}) => {
 
     const today = new Date().getTime();
     const releaseDateAsDate = new Date(releaseDate);
@@ -28,7 +28,7 @@ const Countdown = ({releaseDate}) => {
 
     const releasedInfo = <div className='release-info'>
         <p>Movie was released:</p>
-        <p>{releaseDate}</p>
+        <p>{changeDateFormat(releaseDate)}</p>
     </div>
 
     return <div className="countdown-container">
