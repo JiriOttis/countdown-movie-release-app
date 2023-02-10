@@ -20,6 +20,5 @@ const MobileNavigation = ({deleteCurrentMovie, movie}) => {
 
 };
 
-/*TODO: add animation for menu*/
 
 export default MobileNavigation;

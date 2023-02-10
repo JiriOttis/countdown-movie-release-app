@@ -89,7 +89,7 @@ const MovieCard = ({API_URL, API_KEY, movie}) => {
                 <img src={`${BACKDROP_URL}${posterPath}`} alt="poster" width="390"/>
             </div>
             <div className='info-container'>
-                <p><strong>Release Date: </strong>{changeDateFormat(releaseDate)}</p> {/*TODO: add different date style*/}
+                <p><strong>Release Date: </strong>{changeDateFormat(releaseDate)}</p>
                 <p><strong>Genres:</strong> {genresNames.map((genre) => `${genre}`).join(', ')}</p>
 
                 <p className='description'><strong>Description:</strong><br/>
